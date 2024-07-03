@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="estilo.css">
+    <title>PRODUCCIÓN III </title>
+</head>
+
+<body>
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>PRODUCCIÓN III</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">MÉTODOS</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">NOSOTROS</a></li>
+                            <li><a href="contactos.html">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+
+                    <div class="redes">
+                        <a href="https://www.facebook.com/L.Marcelo.10"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/leandro_ramirezv/"><i class="fa-brands fa-instagram-square"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Desarrollo de página web para la clase de Producción III</h2>
+                <a href="#portfolio">Ir a Métodos</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion">Métodos</h3>
+        <div class="fila">
+            <div class="proyecto" onclick="window.location.href = 'mant_correctivo.html';">
+                <div class="overlay"></div>
+                <img src="img/MC.png" alt="">
+                <div class="info">
+                    <h4>Mantenimiento correctivo</h4>
+                    <p>Unidad I</p>
+                </div>
+            </div>
+            <div class="proyecto" onclick="window.location.href = 'EOQ.html';">
+                <div class="overlay"></div>
+                <img src="img/EOQ.png" alt="">
+                <div class="info">
+                    <h4>Modelo EOQ</h4>
+                    <p>Unidad I</p>
+                </div>
+            </div>
+            <div class="proyecto" onclick="window.location.href = 'rot_inv.html';">
+                <div class="overlay"></div>
+                <img src="img/IP.png" alt="">
+                <div class="info">
+                    <h4>Rotación de inventario</h4>
+                    <p>Unidad I</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="proyecto" onclick="window.location.href = 'LTC.html';">
+                <div class="overlay"></div>
+                <img src="img/LTC.png" alt="">
+                <div class="info">
+                    <h4>Método LTC</h4>
+                    <p>Unidad II</p>
+                </div>
+            </div>
+            <div class="proyecto" onclick="window.location.href = 'LUC.html';">
+                <div class="overlay"></div>
+                <img src="img/LUC.png" alt="">
+                <div class="info">
+                    <h4>Método LUC</h4>
+                    <p>Unidad II </p>
+                </div>
+            </div>
+
+            <div class="proyecto" onclick="window.location.href = 'JIT.html';">
+                <div class="overlay"></div>
+                <img src="img/DCR.png" alt="">
+                <div class="info">
+                    <h4>Método JIT</h4>
+                    <p>Unidad III</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="proyecto" onclick="window.location.href = 'kanban.html';">
+                <div class="overlay"></div>
+                <img src="img/AK_.png" alt="">
+                <div class="info">
+                    <h4>Administración de Kanban</h4>
+                    <p>Unidad III</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <!-- SECCION S O B R E M I -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/Fondo2.png" alt="">
+        </div>
+        <div class="sobremi">
+            <p class="titulo-seccion">sobre Nosotros</p>
+            <h2>Somos estudiantes del <span>4T1-S</span> </h2>
+            <h3>DACTIC</h3>
+            <p>Nuestra página web está dedicada a los diferentes de métodos de producción, desarrollada por 
+                estudiantes de cuarto año de la carrera de Ingeniería de Sistemas. 
+                Nuestra herramienta está diseñada para facilitar la implementación y el análisis de diversos 
+                métodos, proporcionando a los usuarios las herramientas necesarias para mejorar sus procesos 
+                de producción y toma de decisiones.
+            </p>
+            <a href="#">INICIO</a>
+        </div>
+    </section>
+
+   
+    <!-- SECCION FOOTER -->
+    <footer>
+        <p>Producción III 2024</p>
+        <div class="redes">
+            <a href="https://www.facebook.com/L.Marcelo.10"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/leandro_ramirezv/"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

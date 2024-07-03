@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Scroll horizontal si es necesario */
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Alineación centrada verticalmente */
+    margin-bottom: 10px; /* Espacio entre grupos */
+}
+
+.form-group label {
+    flex: 0 0 150px; /* Ancho fijo para etiquetas */
+    text-align: right; /* Alineación derecha */
+    margin-right: 10px; /* Espacio entre etiquetas y campos */
+}
+
+.form-group input[type="number"] {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center; /* Centrado del texto */
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 200px; /* Ancho máximo del botón */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 10px 20px;
+    background-color: #e4a34d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #bd6e01;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+tr.highlight {
+    background-color: #ffcccc;
+}
+
+.error {
+    border-color: #ff0000; /* Borde rojo para indicar error */
+}
+
+
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start; /* Alineación izquierda en móviles */
+    }
+
+    .form-group label {
+        flex: 0 0 100%; /* Ancho completo en móviles */
+        text-align: left; /* Alineación izquierda */
+        margin-right: 0; /* Sin margen */
+        margin-bottom: 5px; /* Espacio entre etiquetas y campos */
+    }
+
+    .form-group input[type="number"] {
+        width: 100%; /* Ancho completo en móviles */
+    }
+
+    button {
+        margin-top: 10px; /* Espacio arriba del botón en móviles */
+        width: 100%; /* Ancho completo en móviles */
+        max-width: 100%; /* Máximo ancho en móviles */
+    }
+}

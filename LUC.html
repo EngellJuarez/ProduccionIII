@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método LUC</title>
+    <link rel="stylesheet" href="LUC.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Método LUC</h1>
+        <form id="inputForm">
+            <div class="form-group">
+                <label for="periods">Cantidad de Periodos:</label>
+                <input type="number" id="periods" name="periods" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="sValue">Valor de s:</label>
+                <input type="number" id="sValue" name="sValue" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="kValue">Valor de k:</label>
+                <input type="number" id="kValue" name="kValue" step="0.01" required>
+            </div>
+            <button type="button" onclick="generateTable1()">Generar Tabla 1</button>
+        </form>
+
+        <div id="table1Container"></div>
+        <div id="table2Container"></div>
+    </div>
+
+    <script src="LUC.js"></script>
+</body>
+</html>

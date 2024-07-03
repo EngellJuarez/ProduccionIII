@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Kanban Calculator</title>
+<link rel="stylesheet" href="kanban.css">
+</head>
+<body>
+<div class="container">
+    <h1>Método Kanban</h1>
+    <form id="kanbanForm">
+        <div class="form-group">
+            <label for="demand">Demanda (D):</label>
+            <input type="number" id="demand" placeholder="Ingrese la demanda" required>
+        </div>
+        <div class="form-group">
+            <label for="leadTime">Tiempo de entrega (L):</label>
+            <input type="number" id="leadTime" placeholder="Ingrese el tiempo de entrega" required>
+        </div>
+        <div class="form-group">
+            <label for="safetyStock">Stock de seguridad (∞) (%):</label>
+            <input type="number" id="safetyStock" step="any" placeholder="Ingrese el stock de seguridad (%)" required>
+        </div>
+        <div class="form-group">
+            <label for="capacity">Capacidad de almacenaje (C) (% del D):</label>
+            <input type="number" id="capacity" step="any" placeholder="Ingrese la capacidad de almacenaje (% del D)" required>
+        </div>
+        <button type="button" onclick="calculateKanban()">Calcular Kanban</button>
+    </form>
+
+    <div id="results">
+        <h2>Resultados:</h2>
+    </div>
+</div>
+
+<script src="kanban.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Mantenimiento Correctivo</title>
+    <link rel="stylesheet" href="mant_correctivo.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mantenimiento Correctivo</h1>
+        <form id="calculo_form">
+            <div class="form-group">
+                <label for="horas">Horas:</label>
+                <input type="number" id="horas" name="horas" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="mtbf_valor">MTBF:</label>
+                <div class="input-group">
+                    <input type="number" id="mtbf_valor" name="mtbf_valor" step="any" required>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mtbf_porcentaje" name="mtbf_porcentaje">
+                        <label for="mtbf_porcentaje">Porcentaje</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="mtbf_relativo_div" style="display:none;">
+                <label for="mtbf_relativo">MTBF Respectivo a:</label>
+                <select id="mtbf_relativo" name="mtbf_relativo">
+                    <option value="horas">Horas Kilometradas</option>
+                    <option value="duracion_tarea">Duración de la Tarea</option>
+                    <option value="costo_trabajo_hora">Costo de Trabajo por Hora</option>
+                    <option value="costo_repuestos">Costos de Repuestos</option>
+                    <option value="costos_operacionales">Costos Operacionales</option>
+                    <option value="costo_unitario_parada">Costo Unitario por Parada</option>
+                    <option value="costo_falla_unica">Costo de Falla Única</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duracion_tarea">Duración de la Tarea (horas):</label>
+                <input type="number" id="duracion_tarea" name="duracion_tarea" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="costo_trabajo_hora">Costo de Trabajo por Hora:</label>
+                <input type="number" id="costo_trabajo_hora" name="costo_trabajo_hora" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="costo_repuestos">Costo de Repuestos:</label>
+                <input type="number" id="costo_repuestos" name="costo_repuestos" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="costos_operacionales">Costos Operacionales:</label>
+                <input type="number" id="costos_operacionales" name="costos_operacionales" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="retraso_logistico">Retraso Logístico (horas):</label>
+                <input type="number" id="retraso_logistico" name="retraso_logistico" step="any">
+            </div>
+            <div class="form-group">
+                <label for="costo_unitario_parada">Costo Unitario por Parada:</label>
+                <input type="number" id="costo_unitario_parada" name="costo_unitario_parada" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="costo_falla_unica">Costo de Falla de vez única:</label>
+                <input type="number" id="costo_falla_unica" name="costo_falla_unica" step="any" required>
+            </div>
+            <button type="button" onclick="CalcularMantCorrectivo()">Calcular</button>
+        </form>
+        <div id="resultados"></div>
+    </div>
+    <script src="mant_correctivo.js"></script>
+</body>
+</html>

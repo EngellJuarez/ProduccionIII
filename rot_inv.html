@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Inventario</title>
+    <link rel="stylesheet" href="rot_inv.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rotación de Inventario</h1>
+        <form id="inventoryForm">
+            <label for="method">Selecciona el método:</label>
+            <select id="method">
+                <option value="fijo" selected>Costo Fijo</option>
+                <option value="promedio">Costo Promedio</option>
+            </select>
+            
+            <!-- Campos para Costo Fijo -->
+            <div id="fixedCostFields" class="fields active">
+                <label for="demand">Demanda anual:</label>
+                <input type="number" id="demand" placeholder="Ingrese la demanda anual">
+                <label for="orderQuantity">Cantidad pedida (Q):</label>
+                <input type="number" id="orderQuantity" placeholder="Ingrese la cantidad pedida">
+                <label for="safetyStock">Inventario de seguridad (SS):</label>
+                <input type="number" id="safetyStock" placeholder="Ingrese el inventario de seguridad">
+            </div>
+            
+            <!-- Campos para Costo Promedio -->
+            <div id="averageCostFields" class="fields">
+                <label for="demandProm">Demanda anual:</label>
+                <input type="number" id="demandProm" placeholder="Ingrese la demanda anual">
+                <label for="reviewCycle">Ciclo de revisión (T):</label>
+                <input type="number" id="reviewCycle" placeholder="Ingrese el ciclo de revisión">
+                <label for="safetyStockProm">Inventario de seguridad (SS):</label>
+                <input type="number" id="safetyStockProm" placeholder="Ingrese el inventario de seguridad">
+            </div>
+            
+            <button type="submit">Calcular</button>
+        </form>
+        
+        <div id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <div id="operations"></div>
+        </div>
+    </div>
+
+    <script src="rot_inv.js"></script>
+</body>
+</html>
